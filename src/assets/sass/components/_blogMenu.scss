@@ -30,11 +30,14 @@
 }
 
 @include mobile {
-    .menu {
+    .blogSideBar {
         width: 100%;
+        overflow-x: auto;
+    }
+    .menu {
+        width: 406px;
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: auto;
         li {
             height: 32px;
             margin-bottom: 0;
@@ -43,7 +46,6 @@
         }
         a {
             @include fs-6;
-            text-wrap: nowrap;
             &::after {
                 border: 1px solid transparent;
             }
