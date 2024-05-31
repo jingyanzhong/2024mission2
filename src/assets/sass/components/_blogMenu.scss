@@ -30,28 +30,25 @@
 }
 
 @include mobile {
-    .blogSideBar {
-        width: 100%;
-        overflow-x: auto;
-    }
     .menu {
-        width: 406px;
+        width: 100%;
         display: flex;
+        overflow-x: scroll;
         flex-wrap: nowrap;
         li {
             height: 32px;
             margin-bottom: 0;
             margin-right: 32px;
-            text-wrap: nowrap;
-        }
-        a {
-            @include fs-6;
-            &::after {
-                border: 1px solid transparent;
-            }
-            &:hover, &.active {
+            a {
+                @include fs-6;
+                text-wrap: nowrap;
                 &::after {
-                    border: 1px solid $primary-800;
+                    border: 1px solid transparent;
+                }
+                &:hover, &.active {
+                    &::after {
+                        border: 1px solid $primary-800;
+                    }
                 }
             }
         }
