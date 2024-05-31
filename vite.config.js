@@ -9,6 +9,8 @@ export default defineConfig({
     vue(),
     eslintPlugin({ cache: false })
   ],
+  base: '/2024mission2/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/2024mission2/' : '/',
   resolve: {
     alias: [
       { find: '@', replacement: fileURLToPath(new URL('./src', import.meta.url)) }
