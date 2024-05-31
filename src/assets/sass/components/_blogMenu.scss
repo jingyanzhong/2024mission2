@@ -43,6 +43,7 @@
         }
         a {
             @include fs-6;
+            text-wrap: nowrap;
             &::after {
                 border: 1px solid transparent;
             }
