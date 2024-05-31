@@ -33,12 +33,13 @@
     .menu {
         width: 100%;
         display: flex;
-        overflow-x: scroll;
         flex-wrap: nowrap;
+        overflow-x: scroll;
         li {
             height: 32px;
             margin-bottom: 0;
             margin-right: 32px;
+            text-wrap: nowrap;
             a {
                 @include fs-6;
                 text-wrap: nowrap;
