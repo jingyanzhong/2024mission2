@@ -30,11 +30,15 @@
 }
 
 @include mobile {
-    .menu {
+    .overflow {
         width: 100%;
+        overflow-x: scroll;
+
+    }
+    .menu {
+        width: 550px;
         display: flex;
         flex-wrap: nowrap;
-        overflow-x: scroll;
         li {
             height: 32px;
             margin-bottom: 0;
@@ -42,6 +46,8 @@
             text-wrap: nowrap;
             a {
                 @include fs-6;
+                display: block;
+                width: 100%;
                 text-wrap: nowrap;
                 &::after {
                     border: 1px solid transparent;

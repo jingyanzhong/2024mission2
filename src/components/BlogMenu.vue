@@ -7,6 +7,7 @@ const { category } = storeToRefs(categoryStore)
 </script>
 
 <template>
+    <div class="overflow">
         <ul class="menu">
             <li><a href="#" @click.prevent="category = 'all'" :class="{ 'active': category === 'all' }">全部文章</a></li>
             <li><a href="#" @click.prevent="category = 'UI/UX 新知'" :class="{ 'active': category === 'UI/UX 新知' }">UI/UX
@@ -16,6 +17,7 @@ const { category } = storeToRefs(categoryStore)
             <li><a href="#" @click.prevent="category = '平面設計'" :class="{ 'active': category === '平面設計' }">平面設計</a></li>
             <li><a href="#" @click.prevent="category = '前端開發'" :class="{ 'active': category === '前端開發' }">前端開發</a></li>
         </ul>
+    </div>
 </template>
 
 <style lang="scss">
