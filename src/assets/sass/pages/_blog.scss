@@ -1,0 +1,111 @@
+.blog {
+    h3 {
+        margin-bottom: 24px;
+        margin-top: 40px;
+    }
+    .subtitle {
+        color: $primary-600;
+        text-align: center;
+        margin-bottom: 80px;
+    }
+}
+
+.blogMain {
+    display: flex;
+    .blogContent {
+        max-width: 966px;
+        width: 100%;
+        margin-right: 24px;
+    }
+    .blogSideBar {
+        padding: 80px;
+    }
+    .articleList {
+        li {
+            margin-bottom: 64px;
+            a {
+                display: flex;
+                color: $primary-900;
+            }
+            .articleImg {
+                max-width: 306px;
+                width: 100%;
+                height: 220px;
+                margin-right: 16px;
+                img {
+                    height: 100%;
+                    border-radius: 8px;
+                    object-fit: cover;
+                    object-position: center center;
+                }
+            }
+            .contentText {
+                max-width: 644px;
+                .time {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 16px;
+                    p {
+                        @include fs-6;
+                        margin-right: 16px;
+                        color: $primary-600;
+                        &:last-of-type {
+                            background: $primary-200;
+                            padding: 4px 12px;
+                            border-radius: 16px;
+                        }
+                    }
+                }
+                h5 {
+                    margin-bottom: 16px;
+                }
+                p {
+                    @include fs-6;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .blog {
+        margin-bottom: 40px;
+        h3 {
+            margin-bottom: 16px;
+        }
+        .subtitle {
+            margin-bottom: 40px;
+        }
+    }
+    .blogMain {
+        flex-direction: column-reverse;
+        .blogContent {
+            margin-right: 0;
+        }
+        .blogSideBar {
+            padding: 20px 12px;
+        }
+        .articleList {
+            li {
+                margin-bottom: 40px;
+                a {
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .articleImg {
+                    margin-right: 0px;
+                    margin-bottom: 16px;
+                }
+                .contentText {
+                    max-width: 306px;
+                    .time {
+                        justify-content: space-between;
+                        p {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

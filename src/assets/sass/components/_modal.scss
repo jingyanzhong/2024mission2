@@ -1,0 +1,171 @@
+.mobile-hide {
+    display: inline;
+}
+
+.modal-close {
+    text-align: end;
+    button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+}
+.modal-mask {
+  position: fixed;
+  z-index: 9998;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  transition: opacity 0.3s ease;
+  padding: 120px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.modal-container {
+  max-width: 1076px;
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.33);
+  transition: all 0.3s ease;
+}
+
+.modal-header{
+  padding: 32px 40px;
+  .title {
+    padding: 40px 0;
+    text-align: center;
+    p {
+        @include fs-6;
+        color: $primary-600;
+        margin-top: 8px;
+    }
+  }
+  .description {
+    display: flex;
+    align-items: center;
+    .text {
+        @include fs-6;
+        &:nth-of-type(1) {
+            max-width: 532px;
+            margin-right: 72px;
+        }
+        &:nth-of-type(2) {
+            margin-left: 24px;
+            color: $primary-600;
+            .mark {
+                margin-top: 8px;
+            }
+        }
+    }
+    hr {
+        height: 56px;
+        border: 1px solid $primary-400;
+    }
+  }
+}
+
+.modal-body {
+  padding: 80px;
+  text-align: center;
+
+  img {
+    border-radius: 20px;
+  }
+
+  h4{
+    margin-top: 24px;
+  }
+
+  p {
+    @include fs-6;
+    color: $primary-600;
+    margin-top: 16px;
+    &:first-of-type {
+        margin-bottom: 56px;
+    }
+  }
+}
+
+
+@include mobile {
+    .mobile-hide {
+        display: none;
+    }
+
+    .modal-mask {
+      padding: 68px 12px;
+    }
+    
+    .modal-header{
+      padding: 32px 32px;
+      .title {
+        padding: 24px 0;
+      }
+      .description {
+        flex-direction: column;
+        .text {
+            &:nth-of-type(1) {
+                margin-right: 0;
+                text-align: start;
+            }
+            &:nth-of-type(2) {
+                margin-left: 0;
+                text-align: center;
+                .mark {
+                    margin-top: 24px;
+                }
+            }
+        }
+        hr {
+            width: 100%;
+            height: auto;
+            margin: 24px 0;
+        }
+      }
+    }
+    
+    .modal-body {
+      padding: 40px 16px;
+    
+      img {
+        border-radius: 8px;
+      }
+    
+      h4{
+        margin-top: 16px;
+      }
+    
+      p {
+        text-align: start;
+        margin-top: 8px;
+      }
+    }
+}
+/*
+ * The following styles are auto-applied to elements with
+ * transition="modal" when their visibility is toggled
+ * by Vue.js.
+ *
+ * You can easily play with the modal transition by editing
+ * these styles.
+ */
+
+.modal-enter-from {
+  opacity: 0;
+}
+
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter-from .modal-container,
+.modal-leave-to .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

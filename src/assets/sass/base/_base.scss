@@ -1,0 +1,141 @@
+*,*::before,*::after {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 40px;
+    line-height: 48px;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 400; 
+}
+
+.container {
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.fs-5 {
+    @include fs-5
+}
+
+.fs-6 {
+    @include fs-6
+}
+
+.deco {
+    position: relative;
+    padding: 0 8px;
+
+    &::after {
+        content: '';
+        width: 100%;
+        height: 8px;
+        background: url(/src/assets/img/mark.png) no-repeat;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: -1;
+    }
+}
+@include mobile {
+    .block {
+        display: block;
+    }
+}
+.tourney {
+    font-family: "Tourney", sans-serif;
+}
+
+h3.title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+
+    img {
+        width: 100px;
+        height: 6px;
+        &.deco-lg {
+            display: block;
+        }
+        &.deco-sm {
+            display: none;
+        }
+        &:nth-of-type(1) {
+            margin-right: 16px;
+        }
+    
+        &:nth-of-type(3) {
+            margin-left: 16px;
+        }
+    }
+}
+
+@include mobile {
+    h3.title {
+        font-size: 24px;
+        margin-top: 80px;
+        margin-bottom: 40px;
+        letter-spacing: $letter-spacing;
+        img {
+            width: 56px;
+            &.deco-lg {
+                display: none;
+            }
+            &.deco-sm {
+                display: block;
+            }
+            &:nth-of-type(2) {
+                margin-right: 16px;
+            }
+    
+            &:nth-of-type(4) {
+                margin-left: 16px;
+            }
+        }
+    }
+}

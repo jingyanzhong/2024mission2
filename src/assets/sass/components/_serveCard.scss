@@ -1,0 +1,41 @@
+.serveCard {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    li {
+        background: url('/src/assets/img/service-item-bg.png') center center no-repeat;
+        background-size: cover;
+        width: calc( 25% - 18px );
+        border-radius: 16px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 80px;
+        transition: all .5s;
+
+        &:hover {
+            transform: translateY(-16px);
+        }
+        img {
+            max-width: 80px;
+        }
+
+        p {
+            @include fs-3;
+            margin-top: 24px;
+            color: $primary-50;
+        }
+    }
+}
+
+@include mobile {
+    .serveCard {
+        flex-direction: column;
+        align-items: center;
+        li {
+            width: 306px;
+            margin-bottom: 24px;
+        }
+    }
+}

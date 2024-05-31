@@ -1,0 +1,177 @@
+.logo {
+    margin-right: 318px;
+
+    a {
+        display: block;
+        background: url(/src/assets/img/logo.png) no-repeat;
+        text-wrap: nowrap;
+        text-indent: 101%;
+        overflow: hidden;
+    }
+}
+.mobile-show {
+    display: none;
+}
+.menu-close {
+    display: none;
+}
+header {
+    padding: 32px;
+
+    .container {
+        display: flex;
+        align-items: center;
+    }
+
+    nav {
+        ul {
+            display: flex;
+            align-items: center;
+        }
+        li {
+            &:last-of-type {
+                a {
+                    margin-right: 0;
+
+                }
+            }
+        }
+        a {
+            @include fs-6;
+            display: block;
+            margin-right: 40px;
+            color: #000;
+            position: relative;
+            padding: 4px 8px;
+            transition: all .5s;
+            &:hover, &.active {
+                font-weight: 600;
+
+                .upperLeft {
+                    border-top: 1px solid #000;
+                    border-left: 1px solid #000;
+                }
+
+                .upperRight {
+                    border-top: 1px solid #000;
+                    border-right: 1px solid #000;
+                }
+
+                .lowerLeft {
+                    border-bottom: 1px solid #000;
+                    border-left: 1px solid #000;
+                }
+
+                .lowerRight {
+                    border-bottom: 1px solid #000;
+                    border-right: 1px solid #000;
+                }
+            }
+        }
+
+        .upperLeft {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid transparent;
+            border-left: 1px solid transparent;
+            transition: all .5s;
+        }
+
+        .upperRight {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-top: 1px solid transparent;
+            border-right: 1px solid transparent;
+            transition: all .5s;
+        }
+
+        .lowerLeft {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 8px;
+            height: 8px;
+            border-bottom: 1px solid transparent;
+            border-left: 1px solid transparent;
+            transition: all .5s;
+        }
+
+        .lowerRight {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 8px;
+            height: 8px;
+            border-bottom: 1px solid transparent;
+            border-right: 1px solid transparent;
+            transition: all .5s;
+        }
+    }
+}
+
+@include mobile {
+    .logo {
+        margin-right: auto;
+    }
+    header {
+        background: #fff;
+        position: sticky;
+        top: 0;
+        padding: 12px;
+        z-index: 12;
+        nav {
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 72px;
+            z-index: 10;
+            background: #fff;
+            transition: all .5s;
+            &.active {
+                display: block;
+            }
+            ul {
+                flex-direction: column;
+                justify-content: center;
+                padding: 40px;
+            }
+            li {
+                margin-bottom: 24px;
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+            a {
+                @include fs-5;
+                margin-right: 0px;
+                &:hover, &.active {
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+    .mobile-show {
+        display: block;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &.hide {
+            display: none;
+        }
+    }
+    .menu-close {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        &.active {
+            display: block;
+        }
+    }
+}

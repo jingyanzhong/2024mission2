@@ -1,0 +1,35 @@
+.articleSwiper {
+    height: 398px;
+    .swiper-slide {
+        h5 {
+            color: $primary-900;
+        }
+        img {
+
+            border-radius: 8px;
+        }
+        .contentText {
+            margin-top: 16px;
+        }
+        .mark {
+            margin-top: 16px;
+            display: flex;
+            justify-content: space-between;
+            p {
+                color: $primary-600;
+                &:nth-of-type(1) {
+                    background: $primary-200;
+                    border-radius: 16px;
+                    padding: 4px 12px;
+                    color: $primary-700;
+                }
+            }
+        }
+    }
+}
+
+@include mobile {
+    .articleSwiper {
+        display: none;
+    }
+}

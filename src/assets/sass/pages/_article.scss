@@ -1,0 +1,207 @@
+.article {
+    .container {
+        display: flex;
+        padding: 120px 0 80px;
+    }
+
+    .content {
+        max-width: 865px;
+        margin-right: 134px;
+
+        .title {
+            margin-bottom: 64px;
+
+            .time {
+                @include fs-6;
+                color: $primary-500;
+                margin-bottom: 40px;
+            }
+
+            h2 {
+                text-align: center;
+                margin-bottom: 24px;
+            }
+
+            .subtitle {
+                text-align: center;
+                font-weight: 400;
+            }
+        }
+
+        .text {
+            p {
+                @include fs-5;
+                color: $primary-700;
+                margin-bottom: 40px;
+            }
+
+            h4 {
+                margin-bottom: 16px;
+            }
+
+            .imgs {
+                display: flex;
+                flex-wrap: wrap;
+
+                figure {
+                    width: calc(50% - 12px);
+                    margin-bottom: 24px;
+
+                    &:nth-of-type(odd) {
+                        margin-right: 24px;
+                    }
+                }
+
+                figcaption {
+                    text-align: center;
+                    margin-top: 8px;
+                }
+            }
+        }
+
+        .relatedArticle {
+            h3 {
+                justify-content: flex-start;
+            }
+
+            .articleList {
+                display: flex;
+
+                li {
+                    width: calc(50% - 12px);
+                    &:nth-of-type(1) {
+                        margin-right: 24px;
+                    }
+                    a {
+                        display: block;
+                        height: 100%;
+                    }
+                    h5 {
+                        color: $primary-900;
+                    }
+
+                    img {
+                        border-radius: 8px;
+                    }
+
+                    .contentText {
+                        display: flex;
+                        flex-direction: column;
+                        margin-top: 16px;
+                        height: 72px;
+                    }
+
+                    .mark {
+                        margin-top: auto;
+                        display: flex;
+                        justify-content: space-between;
+
+                        p {
+                            color: $primary-600;
+
+                            &:nth-of-type(1) {
+                                background: $primary-200;
+                                border-radius: 16px;
+                                padding: 4px 12px;
+                                color: $primary-700;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.sideBar {
+    padding: 80px;
+}
+
+@include mobile {
+    .article {
+        .container {
+            padding: 0 0 80px;
+            flex-direction: column;
+        }
+
+        .content {
+            max-width: 100%;
+            margin-right: 0;
+            padding: 0 12px;
+
+            .title {
+                margin-bottom: 24px;
+
+                .time {
+                    margin-bottom: 16px;
+                }
+
+                h2 {
+                    @include fs-4;
+                    font-weight: 700;
+                    margin-bottom: 16px;
+                }
+
+                .subtitle {
+                    @include fs-6;
+                }
+            }
+
+            .text {
+                p {
+                    margin-bottom: 32px;
+                }
+
+                .imgs {
+                    flex-direction: column;
+
+                    figure {
+                        width: 100%;
+                        margin-bottom: 32px;
+
+                        &:nth-of-type(odd) {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+            .relatedArticle {
+                h3 {
+                    justify-content: center;
+                }
+    
+                .articleList {
+                    flex-direction: column;
+                    align-items: center;
+    
+                    li {
+                        max-width: 306px;
+                        width: 100%;
+                        margin-bottom: 40px;
+                        &:nth-of-type(1) {
+                            margin-right: 0;
+                        }
+                        img {
+                            margin-bottom: 16px;
+                        }
+                        .contentText {
+                            flex-direction: column-reverse;
+                            padding: 0 8px;
+                        }
+    
+                        .mark {
+                            margin-top: 0;
+                            margin-bottom: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .sideBar {
+        order: -1;
+        padding: 20px 12px;
+        margin-bottom: 32px;
+    }
+}

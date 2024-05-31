@@ -1,0 +1,56 @@
+.menu {
+    li {
+        margin-bottom: 32px;
+    }
+    a {
+        @include fs-5;
+        color: $primary-600;
+        position: relative;
+        padding-bottom: 8px;
+        transition: all .5s;
+        &::after {
+            content: '';
+            transition: all .5s;
+            position: absolute;
+            width: 0%;
+            left: 50%;
+            bottom: 0;
+            border: 2px solid transparent;
+        }
+        &:hover, &.active {
+            color: $primary-800;
+            &::after {
+                width: 100%;
+                left: 0;
+                right: 0;
+                border: 2px solid $primary-800;
+            }
+        }
+    }
+}
+
+@include mobile {
+    .menu {
+        width: 100%;
+        display: flex;
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        li {
+            height: 32px;
+            margin-bottom: 0;
+            margin-right: 32px;
+            text-wrap: nowrap;
+        }
+        a {
+            @include fs-6;
+            &::after {
+                border: 1px solid transparent;
+            }
+            &:hover, &.active {
+                &::after {
+                    border: 1px solid $primary-800;
+                }
+            }
+        }
+    }
+}
