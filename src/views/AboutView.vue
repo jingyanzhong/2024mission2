@@ -26,13 +26,13 @@
           <p>
             電話
           </p>
-          <input type="number" name="phone" id="phone">
+          <input type="tel" name="phone" id="phone">
         </label>
         <label for="email">
           <p>
             電子郵件
           </p>
-          <input type="text" name="email" id="email">
+          <input type="email" name="email" id="email">
         </label>
         <label for="ask">
           <p>
