@@ -26,7 +26,7 @@ const { bodyAddStyle } = menuStore
     <header>
         <div class="container">
             <div class="logo">
-                <h1><RouterLink to="/">Noel</RouterLink></h1>
+                <h1><RouterLink to="/" @click="nav = '首頁'">Noel</RouterLink></h1>
             </div>
             <nav :class="{ 'active' : menuToggle === true }">
                 <ul>

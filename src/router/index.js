@@ -33,7 +33,14 @@ const router = createRouter({
       name: 'about',
       component: () => import('../views/AboutView.vue')
     }
-  ]
+  ],
+  scrollBehavior (to, from, savedPosition) {
+    // 始终滚动到顶部
+    return {
+      top: 0,
+      behavior: 'smooth'
+    }
+  }
 })
 
 router.onError((error, to) => {
