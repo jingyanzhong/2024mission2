@@ -1,0 +1,48 @@
+.about {
+    padding: 0 0 120px 0;
+}
+label {
+    display: block;
+    @include fs-6;
+}
+.container {
+    max-width: 480px;
+}
+from {
+    p {
+        margin-bottom: 8px;
+        margin-top: 16px;
+    }
+    input {
+        padding: 8px 16px;
+        width: 100%;
+        &[type='radio'] {
+            width: auto;
+        }
+    }
+    textarea {
+        width: 100%;
+        padding: 8px 16px;
+    }
+    button {
+        width: 100%;
+        margin-top: 24px;
+        padding: 8px 16px;
+        border: none;
+        background: $primary-700;
+        color: $primary-50;
+        transition: all .5s;
+        cursor: pointer;
+        border-radius: 8px;
+        @include fs-6;
+        &:hover {
+            background: $primary-900;
+        }
+    }
+}
+
+@include mobile {
+    .container {
+        padding: 0 12px;
+    }
+}
