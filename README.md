@@ -1,7 +1,8 @@
-# Vue 3 + Vite
+# 六角學院 2024 體驗營 | 切版任務二 - 個人品牌網站
+此為2024年六角學院舉辦的軟體工程師體驗營之作品。
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
-
-## Recommended IDE Setup
-
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+## 使用技術
+* vue3 + vite
+* pinia
+* scss
+* swiper
