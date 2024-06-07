@@ -5,8 +5,8 @@ import { Swiper, SwiperSlide } from 'swiper/vue'
 import 'swiper/css'
 import 'swiper/css/pagination'
 // import required modules
-import { Pagination } from 'swiper/modules'
-const modules = [Pagination]
+import { Pagination, Autoplay } from 'swiper/modules'
+const modules = [Pagination, Autoplay]
 </script>
 
 <template>
@@ -15,6 +15,11 @@ const modules = [Pagination]
     :spaceBetween="24"
     :pagination="{
       clickable: true,
+    }"
+    :autoplay="{
+    delay: 4000,
+    disableOnInteraction: false,
+    pauseOnMouseEnter: true
     }"
     :modules="modules" class="articleSwiper">
     <swiper-slide>
